@@ -127,7 +127,7 @@ ARCH=$(dpkg --print-architecture)
 HOSTNAME=homeassistant
 TEMPLATE_STRING="local:vztmpl/${TEMPLATE}"
 pct create $CTID $TEMPLATE_STRING -arch $ARCH -cmode shell -features nesting=1 \
-  -hostname $HOSTNAME -net0 name=eth0,bridge=vmbr0,ip=manual,-onboot 1 \
+  -hostname $HOSTNAME -net0 name=eth0,bridge=vmbr0,ip=10.0.0.3/24,gw=10.0.0.1,-onboot 1 \
   -ostype $OSTYPE -rootfs $ROOTFS,size=$DISK_SIZE -storage $STORAGE >/dev/null
 
 # Modify LXC permissions to support Docker
