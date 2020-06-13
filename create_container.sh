@@ -54,7 +54,7 @@ TEMP_DIR=$(mktemp -d)
 pushd $TEMP_DIR >/dev/null
 
 # Download setup script
-REPO="https://github.com/whiskerz007/proxmox_hassio_lxc"
+REPO="https://github.com/Justahobby01/proxmox_hassio_lxc"
 wget -qO - ${REPO}/tarball/master | tar -xz --strip-components=1
 
 # Select storage location
